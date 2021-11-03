@@ -1,17 +1,14 @@
-import React from 'react';
+// @ts-check
+/* eslint-disable no-console */
+
+import '@toast-ui/editor/dist/toastui-editor.css';
+
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react';
+
+import MarkdownEditor from './MarkdownEditor.jsx';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <MarkdownEditor onContentChange={console.log} />,
+  document.getElementById('container'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
